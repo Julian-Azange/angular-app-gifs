@@ -1,0 +1,14 @@
+<div class="bg-dark border-right p-3" id="sidebar">
+    <div class="d-flex justify-content-between">
+        <h3>😎</h3>
+        <h3 class="text-light text-center">GifApp</h3>
+        <button class="btn btn-outline-danger btn-sm" (click)="clearHistory()">🗑️</button>
+    </div>
+    <hr class="text-light">
+    <div class="list-group list-reset">
+        <button *ngFor="let tag of tagHistory" (click)="searchTag(tag)"
+            class="list-group-item list-group-item-action text-start">
+            📌 {{ tag | titlecase }}
+        </button>
+    </div>
+</div>
