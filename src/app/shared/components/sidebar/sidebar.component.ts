@@ -22,5 +22,11 @@ export class SidebarComponent {
         this.gifsService.clearHistory();
     }
 
+    isSidebarOpen = false; // Variable para rastrear el estado del sidebar
 
+    // Función para alternar el estado del sidebar
+    toggleSidebar() {
+        this.isSidebarOpen = !this.isSidebarOpen;
+        console.log('clic')
+    }
 }
